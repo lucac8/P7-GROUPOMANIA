@@ -1,0 +1,28 @@
+.arrow {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: larger;
+}
+
+.profil-button,
+.deco {
+    color: black;
+    width: 150px;
+    padding: 12px;
+    color: black;
+    transition: all .3s;
+    border-radius: 25px;
+    border: none;
+    background-color: $color-1;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-2;
+        color: white;
+    }
+
+}

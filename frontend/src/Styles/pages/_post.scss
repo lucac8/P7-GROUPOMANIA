@@ -1,0 +1,234 @@
+.post-page {
+    background-color: #DAE0E6;
+
+    .center {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        background-color: white;
+        border-radius: 20px;
+
+        .account {
+            display: flex;
+            justify-content: space-between;
+
+            .deco {
+                margin-right: 10px;
+            }
+        }
+
+        .link {
+            text-decoration: none;
+            color: black;
+            width: 100px;
+            height: 20%;
+            padding: 12px;
+            color: black;
+            transition: all .3s;
+            border-radius: 25px;
+            border: none;
+            background-color: $color-1;
+            text-align: center;
+            margin-top: 10px;
+            margin-left: 10px;
+
+            &:hover {
+                background-color: $color-2;
+                color: white;
+            }
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .post {
+
+            .post-card {
+                width: 90%;
+                margin: 15px auto;
+                border: 3px solid $color-1;
+                box-shadow: $shadow ;
+                padding: 15px;
+                border-radius: 20px;
+
+                img {
+                    margin: auto;
+                    display: block;
+                    max-width: 100%;
+                    max-height: 500px;
+                }
+
+                h4 {
+                    font-size: large;
+                    margin: 15px 0;
+                }
+
+                .wrapper {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    .icon {
+                        position: relative;
+                        background: $color-1;
+                        border-radius: 50%;
+                        padding: 15px;
+                        margin: 10px;
+                        width: 50px;
+                        height: 50px;
+                        font-size: 18px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                        cursor: pointer;
+                        transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+                        &:hover {
+                            background-color: $color-2;
+
+                            .tooltip {
+                                top: -35px;
+                                opacity: 1;
+                                visibility: visible;
+                                pointer-events: auto;
+                                text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+                                background-color: $color-2;
+                            }
+
+                            span {
+                                text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+
+                            }
+
+                            .svg-inline--fa {
+                                color: #ffffff;
+                            }
+                        }
+
+                    }
+
+                    .tooltip {
+                        position: absolute;
+                        top: 0;
+                        font-size: 16px;
+                        background: #ffffff;
+                        color: #ffffff;
+                        padding: 5px 8px;
+                        border-radius: 5px;
+                        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            height: 8px;
+                            width: 8px;
+                            background: $color-2;
+                            bottom: -3px;
+                            left: 50%;
+                            transform: translate(-50%) rotate(45deg);
+                            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    form {
+        margin: 40px 0;
+
+        input[type=text] {
+            display: block;
+            width: 90%;
+            height: 90%;
+            margin: auto;
+            padding: 12px;
+            border: none;
+            border-bottom: 1px solid $color-1;
+            outline: none;
+
+            &:focus {
+                border: none;
+                border-bottom: 1px solid $color-2;
+            }
+        }
+
+        input[type=submit] {
+            display: block;
+            width: 100px;
+            height: 20%;
+            margin: auto;
+            padding: 12px;
+            color: black;
+            transition: all .3s;
+            border-radius: 25px;
+            border: none;
+            background-color: $color-1;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-2;
+                color: white;
+            }
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            width: 90%;
+            height: 90%;
+            margin: auto;
+        }
+
+        #image {
+            display: none;
+            margin: auto;
+        }
+    }
+
+
+}
+
+#preview {
+    display: none;
+}
+
+
+.svg-inline--fa {
+    color: black;
+}
+
+.button {
+
+    text-decoration: none;
+    color: black;
+    width: 20%;
+    height: 20%;
+    padding: 12px;
+    color: black;
+    transition: all .3s;
+    border-radius: 25px;
+    border: none;
+    background-color: $color-1;
+    text-align: center;
+    margin: auto;
+
+    &:hover {
+        background-color: $color-2;
+        color: white;
+    }
+
+}
