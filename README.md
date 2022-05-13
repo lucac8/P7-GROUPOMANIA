@@ -2,7 +2,7 @@
 
 ## Backend :
 - Créer la batabase groupomania dans le terminal de commande MySql
-- Remplir avec ses information le fichier config/db.js
+- Remplir avec ses informations le fichier config/db.js
 - npm install 
 - npm start 
 
