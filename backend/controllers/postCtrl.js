@@ -19,7 +19,7 @@ exports.createPost = (req, res) => {
 
 }
 
-exports.getAllPost = (req, res) => { //Info recup username /userid 
+exports.getAllPost = (req, res) => {
     User.findOne({ where: { idUser: req.auth.idUser } })
         .then(user => {
             const Admin = user.isAdmin

@@ -25,6 +25,6 @@ app.use('/api/user', userRoutes);
 app.use('/api/post', postRoutes);
 app.use('/api/comment', commentRoutes)
 
-app.listen(process.env.PORT, async () => {
+app.listen(5000, async () => {
     await db.sync()
 })  

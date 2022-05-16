@@ -27,7 +27,7 @@ const Profil = () => {
         ).then((res => { console.log(res), setAlert(alert + 1) }))
     }
 
-    const deleteProfil = (e) => {
+    const deleteProfil = () => {
         if (!window.confirm(`Voulez-vous supprimez le compte ?`)) return;
         axios.delete(`http://localhost:5000/api/user/${id}`, { headers: { "Authorization": "Bearer " + localStorage.getItem('token') } }).then((res => {
             window.location = 'http://localhost:3000'
