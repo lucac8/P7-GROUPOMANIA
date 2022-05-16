@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import Delete from './Delete';
+import Delete from '../components/Posts/Delete';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-import DeleteComment from './DeleteComment';
-import Header from '../Header';
+import DeleteComment from '../components/Posts/DeleteComment';
+import Header from '../components/Header';
 
 const Comment = () => {
 

@@ -58,7 +58,7 @@ const Post = () => {
                                 <span>Poster par : {post.User.username}</span>
                                 <h4> {post.title} </h4>
                                 <p> {post.content} </p>
-                                <img src={post.imageUrl} alt={post.imageUrl} />
+                                {post.imageUrl != null && <img src={post.imageUrl} alt={post.imageUrl} />}
                                 <div className="wrapper">
                                     {compoDelete(post)}
                                     <Link to={`/post/${post.idPost}`} state={post}> <div className='icon'> <FontAwesomeIcon icon={faComment} /> <span className="tooltip">Comment</span> </div> </Link>

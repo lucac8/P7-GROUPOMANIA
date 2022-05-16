@@ -30,35 +30,5 @@ const User = sequelize.define('User', {
     }
 });
 
-
-//User.hasMany(Post, { foreignKey: 'idUser' })
-
 module.exports = User
 
-/*
-module.exports = (db, DataTypes) => {
-    const User = db.define("User", {
-        idUser: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true
-        },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            unique: true
-        },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        username: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        bio: {
-            type: DataTypes.STRING
-        },
-    });
-    return User;
-};*/

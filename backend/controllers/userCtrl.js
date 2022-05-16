@@ -47,7 +47,7 @@ exports.userInfo = (req, res) => {
 }
 
 exports.userUpdate = (req, res) => {
-    User.update({ ...req.body }, { where: { idUser: req.params.id } })
+    User.update({ ...req.body }, { where: { idUser: req.auth.idUser } })
         .then(userInfo => res.status(200).json(userInfo))
         .catch(error => res.status(404).json({ error }));
 }

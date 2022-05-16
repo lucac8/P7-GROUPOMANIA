@@ -24,7 +24,7 @@ const Profil = () => {
         e.preventDefault();
         axios.put(`http://localhost:5000/api/user/${id}`, { username, bio, idUser: Number(localStorage.getItem('user')) },
             { headers: { "Authorization": "Bearer " + localStorage.getItem('token') } }
-        ).then((res => { console.log(res), setAlert(alert + 1) }))
+        ).then((res => { console.log(res), setAlert(alert + 1), document.querySelector('.modif').innerHTML = 'Modification effectuée' }))
     }
 
     const deleteProfil = () => {
@@ -53,6 +53,7 @@ const Profil = () => {
                     <br />
                     <input type="submit" value="Update" className='button' />
                 </form>
+                <div className="modif"></div>
             </div>
         </div>
 
