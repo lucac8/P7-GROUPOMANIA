@@ -43,6 +43,7 @@ const Create = ({ alert, setAlert }) => {
         console.log(e.target.files[0])
         if (e.target.files.length > 0) {
             let src = URL.createObjectURL(e.target.files[0]);
+
             let preview = document.getElementById("preview");
             preview.src = src;
             preview.style.display = "block";
@@ -51,13 +52,13 @@ const Create = ({ alert, setAlert }) => {
 
     return (
         <form action="" onSubmit={createPost} id="createPost">
-            <input type="text" id="title" name="title" required={true} placeholder='Titre' onChange={(e) => setTitle(e.target.value)} value={title} />
+            <input type="text" id="title" name="title" required={true} placeholder='Titre' aria-label="Titre" onChange={(e) => setTitle(e.target.value)} value={title} />
             <br />
-            <input type="text" name="content" id="content" required={true} placeholder='Message' onChange={(e) => setContent(e.target.value)} value={content} />
+            <input type="text" name="content" id="content" required={true} placeholder='Message' aria-label="Message" onChange={(e) => setContent(e.target.value)} value={content} />
             <br />
             <label htmlFor="image"><FontAwesomeIcon icon={faImages} /> Choisir une image</label>
             <input type="file" name='image' id='image' accept="image/png, image/jpeg" onChange={(e) => { setFile(e.target.files[0]); preview(e) }} />
-            <img id='preview' ></img>
+            <img id='preview' alt='preview'></img>
             <br />
             <input type="submit" value="Poster" className='button' />
         </form>

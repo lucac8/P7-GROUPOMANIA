@@ -40,8 +40,8 @@ const Profil = () => {
             <Header />
             <Link to={"/post"} className='arrow'><FontAwesomeIcon icon={faArrowLeft} /></Link>
             <div className='center'>
-                <div className='profil-button'>
-                    <span onClick={deleteProfil} >Supprimez le compte </span>
+                <div className='profil-button' onClick={deleteProfil}>
+                    <span>Supprimez le compte </span>
                 </div>
                 <h3>Email : {data.email}</h3>
                 <form action="" onSubmit={updateProfil} id="updateProfil">

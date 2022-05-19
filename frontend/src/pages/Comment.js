@@ -15,7 +15,7 @@ const Comment = () => {
     const [content, setContent] = useState("")
     const [alert, setAlert] = useState(0)
 
-    //Recup info mis ds le lien
+    //Recup info mis ds le link
     const location = useLocation();
     const post = location.state;
 
@@ -72,7 +72,7 @@ const Comment = () => {
                     </div>
                 </div>
                 <form action="" onSubmit={createComment} id="createComment">
-                    <input type="text" name="content" id="content" required={true} placeholder='Message' onChange={(e) => setContent(e.target.value)} value={content} />
+                    <input type="text" name="content" id="content" required={true} placeholder='Message' aria-label="Commentaire" onChange={(e) => setContent(e.target.value)} value={content} />
                     <br />
                     <input type="submit" value="Commenter" className='button' />
                 </form>
